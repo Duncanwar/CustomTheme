@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>Blog Site Template</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -56,3 +55,8 @@
 			</div>
 		</nav>
     </header>
+
+    <div class="main-wrapper">
+	    <header class="page-title theme-bg-light text-center gradient py-5">
+			<h1 class="heading">Blog Home Page Heading</h1>
+		</header>
