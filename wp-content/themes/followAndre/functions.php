@@ -6,7 +6,7 @@ function followduncan_theme_support()
     add_theme_support('title-tag');
     add_theme_support('custom-logo');
     add_theme_support('post-thumbnails');
-    // add_theme_support('');
+    add_theme_support('widgets');
 }
 add_action('after_setup_theme','followduncan_theme_support');
 
@@ -63,3 +63,31 @@ function followduncan_register_scripts()
     wp_enqueue_script('followduncan-style', get_template_directory_uri() . '/assets/js/main.js', array(), '1.0', true);
 }
 add_action('wp_enqueue_scripts','followduncan_register_scripts');
+
+function followduncan_widget_areas(){
+    register_sidebar(
+        array(
+            'before_title'=>'',
+            'after_title'=>'',
+            'before_widget'=>'',
+            'after_widget'=>'',
+            'name'=>'Sidebar Area',
+            'id'=>'sidebar-1',
+            'description'=>'Sidebar Widget Area'
+        )
+        );
+
+        register_sidebar(
+            array(
+                'before_title'=>'',
+                'after_title'=>'',
+                'before_widget'=>'',
+                'after_widget'=>'',
+                'name'=>'Footer Area',
+                'id'=>'footer-1',
+                'description'=>'Footer Widget Area'
+            )
+            );
+}
+
+add_action('widgets_init', 'followduncan_widget_areas');
